@@ -17,7 +17,7 @@ class LibrariansControllerTest < ActionDispatch::IntegrationTest
 
   test "should create librarian" do
     assert_difference("Librarian.count") do
-      post librarians_url, params: { librarian: { email: @librarian.email, password: @librarian.password } }
+      post librarians_url, params: { librarian: { email: @librarian.email, name: @librarian.name, password: @librarian.password } }
     end
 
     assert_redirected_to librarian_url(Librarian.last)
@@ -34,7 +34,7 @@ class LibrariansControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update librarian" do
-    patch librarian_url(@librarian), params: { librarian: { email: @librarian.email, password: @librarian.password } }
+    patch librarian_url(@librarian), params: { librarian: { email: @librarian.email, name: @librarian.name, password: @librarian.password } }
     assert_redirected_to librarian_url(@librarian)
   end
 

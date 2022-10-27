@@ -15,6 +15,7 @@ class LibrariansTest < ApplicationSystemTestCase
     click_on "New librarian"
 
     fill_in "Email", with: @librarian.email
+    fill_in "Name", with: @librarian.name
     fill_in "Password", with: @librarian.password
     click_on "Create Librarian"
 
@@ -27,6 +28,7 @@ class LibrariansTest < ApplicationSystemTestCase
     click_on "Edit this librarian", match: :first
 
     fill_in "Email", with: @librarian.email
+    fill_in "Name", with: @librarian.name
     fill_in "Password", with: @librarian.password
     click_on "Update Librarian"
 

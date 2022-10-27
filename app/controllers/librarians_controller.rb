@@ -65,6 +65,6 @@ class LibrariansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def librarian_params
-      params.require(:librarian).permit(:email, :password)
+      params.require(:librarian).permit(:name, :email, :password)
     end
 end
