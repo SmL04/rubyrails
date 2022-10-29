@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'home/index'
+
+  get '/inicio' => 'home#index'
+  root 'home#index'
+
   resources :clients
   resources :librarians
   resources :books
