@@ -14,8 +14,7 @@ class ClientsTest < ApplicationSystemTestCase
     visit clients_url
     click_on "New client"
 
-    fill_in "Book", with: @client.book_id
-    fill_in "Librarian", with: @client.librarian_id
+    fill_in "Email", with: @client.email
     fill_in "Name", with: @client.name
     click_on "Create Client"
 
@@ -27,8 +26,7 @@ class ClientsTest < ApplicationSystemTestCase
     visit client_url(@client)
     click_on "Edit this client", match: :first
 
-    fill_in "Book", with: @client.book_id
-    fill_in "Librarian", with: @client.librarian_id
+    fill_in "Email", with: @client.email
     fill_in "Name", with: @client.name
     click_on "Update Client"
 
